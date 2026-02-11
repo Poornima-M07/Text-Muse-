@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Cormorant+Garamond:wght@400&family=Poppins:wght@400;500&family=Lora:wght@400&display=swap" rel="stylesheet">
+  <title>Art Idea Generator</title>
+</head>
+
+<style>
+
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+body {
+  height: 100vh;
+  background-color: #f6efe7;
+  font-family: "Poppins", sans-serif;
+  display: row;
+  justify-content: center;
+  align-items: center;
+  color: #4b3f35;
+  text-align: center;
+  
+}
+
+  button {
+  background-color: #e6d3b1;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #4b3f35;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+font-weight: 500;
+  }
+  
+  .idea-box {
+  background-color: #f3e9dd;
+  padding: 22px;
+  border-radius: 16px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+    font-family: 'Lora', serif;
+}
+  
+h1{font-family: 'Playfair Display', serif;
+}
+ p{ font-family: 'Cormorant Garamond', serif;
+}
+  
+h4{font-family: 'Poppins', sans-serif;
+}
+
+  </style>
+<body>
+  <h1>
+   Text Muse <hr size= 5>
+  </h1>
+  <br>
+  <p>A place to build inspiration</p>
+  <br>
+  <h4>Text Muse is a small space made for quiet inspiration.
+Click, pause, and let a simple prompt spark a new thought, sketch, or story.
+There is no right or wrong way to create here. Just gentle ideas to get you started.</h4>
+  
+  <div class="idea-box"; id= 'idea'>Click below for an art idea</div>
+  
+  <button onclick="generateIdea()">Generate!</button>
+  <footer></footer>
+  
+  <script>
+    const ideas = [
+      "A girl sitting by a window during golden hour",
+      "A cozy cafe on a rainy afternoon",
+      "A dreamy character surrounded by floating flowers",
+      "An old bookshop hidden in a narrow street",
+      "A soft portrait using only warm tones",
+      "A teacup filled with tiny galaxies",
+      "A peaceful forest spirit resting",
+      "A bedroom lit only by fairy lights",
+      "Clouds shaped like animals at sunset",
+      "A self-portrait using abstract shapes",
+  "A girl with a dress made of flowers", "A girl journalling in sunset",
+  "A tuxedo wearing capybara", "What peace would look like as a place",
+  "Your favourite color as a person",
+  "A girl dancing under a street lamp"
+    ];
+
+    function generateIdea() {
+      const randomIdea = ideas[Math.floor(Math.random() * ideas.length)];
+      document.getElementById("idea").textContent = randomIdea;
+    }
+  </script>
+</body>
+</html>
